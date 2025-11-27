@@ -1,3 +1,2 @@
-# Exercise 1
+# Exercise 
 
-git 
