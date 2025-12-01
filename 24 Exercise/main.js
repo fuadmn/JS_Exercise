@@ -1,10 +1,9 @@
 
-function greet( name = "Guest") {
-  console.log(`Hello ${name}`);
-}
+// function greet( name = "Guest") {
+//   console.log(`Hello ${name}`);
+// }
 
-greet();
-
+// greet();
 
 function calculateArea(width,height){
   console.log(width * height)
