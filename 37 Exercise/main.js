@@ -1,4 +1,6 @@
 
+
+
 const form = document.querySelector("#form");
 const postTitle = document.querySelector("#postTitle");
 const imageUrl = document.querySelector("#imageUrl");
@@ -6,39 +8,147 @@ const WriteYour = document.querySelector("#WriteYour");
 const Write_your = document.querySelector("#Write_your");
 const postUl = document.querySelector("#postUl");
 
-form.addEventListener("submit",function(event){
+document.addEventListener("DOMContentLoaded", loadPost);
 
-    event.preventDefault();
+function loadPost() {
 
-   const postTitleText = postTitle.value.trim();
-   
+  const posts = getPost();
 
-   
-   if(postTitleText !== ""){
-      const post = {
-        id : Date.now(),
-        text : postTitleText,
-        completed : false,
-      }
-       addPostTextDOM(post)
+  posts.forEach(post => {
+    addPostTextDOM(post);
 
-       postTitle.value = "";
-   }
-  
-})
+  });
 
-function addPostTextDOM(post){
+
+}
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const postTitleText = postTitle.value.trim();
+  const postImage = imageUrl.value;
+  const WritePost = WriteYour.value;
+
+  if (postTitleText !== "") {
+    const post = {
+      id: Date.now(),
+      text: postTitleText,
+      image: postImage,
+      textPost: WritePost,
+      completed: false,
+    };
+
+    addPostTextDOM(post);
+    savePost(post);
+
+
+    postTitle.value = "";
+    imageUrl.value = "";
+    WriteYour.value = "";
+  }
+});
+
+function addPostTextDOM(post) {
   const li = document.createElement("li");
   li.classList = `form`;
   li.dataset.id = post.id;
 
-  li.innerHTML = ` <span class="task">${post.text}</span>  
+  li.innerHTML = ` <span class="post">${post.text}</span>  
+  <img class="postImage" src="${post.image}" alt="todo image"/>
+        <span class="postText">${post.textPost}</span> 
                      <div class="edit-delete"> 
                       <button class="edit-btn">Edit</button>
                      <button class="delete-btn">Delete</button>
                       </div>
                     `;
 
+  postUl.appendChild(li);
 
-                     postUl.appendChild(li)
+  deltePost(li, post);
+
+}
+
+function deltePost(li, post) {
+
+  const delleteBtn = li.querySelector(".delete-btn");
+  const editBtn = li.querySelector(".edit-btn");
+
+  delleteBtn.addEventListener("click", function () {
+    delteHanle(post.id, li)
+  });
+
+  editBtn.addEventListener("click", function () {
+    handleEdit(post.id, li)
+  })
+
+}
+
+function handleEdit(taskId, li) {
+
+  const taskSpan = li.querySelector(".post");
+  console.log(taskSpan.textContent)
+
+  const newPostTxt = prompt("Edit your task:", taskSpan.textContent)
+
+  if (newPostTxt !== null && newPostTxt.trim() !== "") {
+
+    taskSpan.textContent = newPostTxt;
+  }
+
+  const postImage = li.querySelector(".postImage");
+  console.log("image element ", postImage)
+
+  console.log(postImage.src)
+
+  const newImage = prompt("Edit your Image:", postImage.textContent)
+
+  if (newImage !== null && newImage.trim() !== "") {
+
+    // postImage.textContent = newImage;
+    postImage.src = newImage;
+
+  }
+
+
+  const postText = li.querySelector(".postText");
+  console.log(postText.textContent)
+
+  const newTxt = prompt("Edit your newTxt:", postText.textContent)
+  console.log(newImage, postText)
+  if (newTxt !== null && newTxt.trim() !== "") {
+
+    postText.textContent = newTxt;
+
+  }
+  console.log(postImage, newPostTxt,)
+}
+
+
+function delteHanle(id, li) {
+
+  let posts = getPost();
+
+  posts = posts.filter(post => post.id != id);
+
+  localStorage.setItem("posts", JSON.stringify(posts));
+
+  li.remove();
+
+}
+
+function savePost(post) {
+
+
+  const allPost = getPost();
+
+  allPost.push(post)
+
+  localStorage.setItem("posts", JSON.stringify(allPost));
+
+}
+
+function getPost() {
+  const allPost = JSON.parse(localStorage.getItem("posts")) || [];
+  return allPost;
+
 }

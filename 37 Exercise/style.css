@@ -1,0 +1,88 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: rgb(247, 244, 240);
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_create{
+  background-color: white;
+  box-shadow: 0px 0px 10px rgb(230, 221, 221);
+  height: 20rem;
+  width: 30rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+
+.container_create h1{
+    margin-bottom: 0.5rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.postTitle, .imageUrl, .Write_your, .button{
+    margin-bottom: 0.5rem;
+    height: 1.5rem;
+}
+
+.Write_your{
+    height: 9rem;
+}
+
+::placeholder{
+    padding-left: 0.4rem;
+}
+
+.all_post{
+    width: 30rem;
+    /* height: 25rem; */
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(230, 221, 221);
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+}
+
+.absolute_post{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postUl{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+img, .url{
+    height: 15rem;
+    width: 25rem;
+    margin-bottom: 0.3rem;
+}
+
+button{
+    width: 4rem;
+}
+
+span{
+    margin: 0.5rem 0;
+}
+
+.edit-delete{
+    display: flex;
+    gap:  0.5rem;
+}
