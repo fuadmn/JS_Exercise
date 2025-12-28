@@ -55,6 +55,8 @@ function addPostTextDOM(post) {
 
   li.innerHTML = ` <span class="post">${post.text}</span>  
   <img class="postImage" src="${post.image}" alt="todo image"/>
+  <img class="postImage" src="${post.image}" alt=" image"/>
+>>>>>>> 134718c (37)
         <span class="postText">${post.textPost}</span> 
                      <div class="edit-delete"> 
                       <button class="edit-btn">Edit</button>
@@ -80,6 +82,7 @@ function deltePost(li, post) {
   editBtn.addEventListener("click", function () {
     handleEdit(post.id, li)
   })
+
 
 }
 
@@ -108,6 +111,42 @@ function handleEdit(taskId, li) {
     postImage.src = newImage;
 
   }
+  
+
+}function handleEdit(postId, li) {
+  let posts = getPost();
+  const post = posts.find(p => p.id === postId);
+  if (!post) return;
+
+  // TITLE
+  const titleSpan = li.querySelector(".post");
+  const newTitle = prompt("Edit title:", titleSpan.textContent);
+  if (newTitle && newTitle.trim() !== "") {
+    titleSpan.textContent = newTitle;
+    post.text = newTitle;
+  }
+
+  // IMAGE
+  const img = li.querySelector(".postImage");
+  const newImage = prompt("Edit image URL:", img.src);
+  if (newImage && newImage.trim() !== "") {
+    img.src = newImage;
+    post.image = newImage;
+  }
+
+  // TEXT
+  const textSpan = li.querySelector(".postText");
+  const newText = prompt("Edit post text:", textSpan.textContent);
+  if (newText && newText.trim() !== "") {
+    textSpan.textContent = newText;
+    post.textPost = newText;
+  }
+
+  // SAVE UPDATED DATA
+  localStorage.setItem("posts", JSON.stringify(posts));
+}
+
+>>>>>>> 134718c (37)
 
 
   const postText = li.querySelector(".postText");
@@ -120,8 +159,14 @@ function handleEdit(taskId, li) {
     postText.textContent = newTxt;
 
   }
+<<<<<<< HEAD
   console.log(postImage, newPostTxt,)
 }
+=======
+  console.log(postImage, newPostTxt)
+
+
+>>>>>>> 134718c (37)
 
 
 function delteHanle(id, li) {
