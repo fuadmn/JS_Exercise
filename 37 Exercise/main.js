@@ -118,7 +118,8 @@ function handleEdit(taskId, li) {
   const post = posts.find(p => p.id === postId);
   if (!post) return;
 
-  // TITLE
+
+  
   const titleSpan = li.querySelector(".post");
   const newTitle = prompt("Edit title:", titleSpan.textContent);
   if (newTitle && newTitle.trim() !== "") {
@@ -126,7 +127,7 @@ function handleEdit(taskId, li) {
     post.text = newTitle;
   }
 
-  // IMAGE
+
   const img = li.querySelector(".postImage");
   const newImage = prompt("Edit image URL:", img.src);
   if (newImage && newImage.trim() !== "") {
@@ -134,7 +135,7 @@ function handleEdit(taskId, li) {
     post.image = newImage;
   }
 
-  // TEXT
+  
   const textSpan = li.querySelector(".postText");
   const newText = prompt("Edit post text:", textSpan.textContent);
   if (newText && newText.trim() !== "") {
@@ -142,7 +143,7 @@ function handleEdit(taskId, li) {
     post.textPost = newText;
   }
 
-  // SAVE UPDATED DATA
+  
   localStorage.setItem("posts", JSON.stringify(posts));
 }
 
