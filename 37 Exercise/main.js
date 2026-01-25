@@ -88,8 +88,12 @@ function deltePost(li, post) {
   const post = posts.find(p => p.id === postId);
   if (!post) return;
 
+<<<<<<< HEAD
 
   
+=======
+  // TITLE
+>>>>>>> 85774ff33c3a80228bfee6ac236d287557aca9ee
   const titleSpan = li.querySelector(".post");
   const newTitle = prompt("Edit title:", titleSpan.textContent);
   if (newTitle && newTitle.trim() !== "") {
@@ -97,7 +101,11 @@ function deltePost(li, post) {
     post.text = newTitle;
   }
 
+<<<<<<< HEAD
 
+=======
+  // IMAGE
+>>>>>>> 85774ff33c3a80228bfee6ac236d287557aca9ee
   const img = li.querySelector(".postImage");
   const newImage = prompt("Edit image URL:", img.src);
   if (newImage && newImage.trim() !== "") {
@@ -105,7 +113,11 @@ function deltePost(li, post) {
     post.image = newImage;
   }
 
+<<<<<<< HEAD
   
+=======
+  // TEXT
+>>>>>>> 85774ff33c3a80228bfee6ac236d287557aca9ee
   const textSpan = li.querySelector(".postText");
   const newText = prompt("Edit post text:", textSpan.textContent);
   if (newText && newText.trim() !== "") {
@@ -113,7 +125,11 @@ function deltePost(li, post) {
     post.textPost = newText;
   }
 
+<<<<<<< HEAD
   
+=======
+  // SAVE UPDATED DATA
+>>>>>>> 85774ff33c3a80228bfee6ac236d287557aca9ee
   localStorage.setItem("posts", JSON.stringify(posts));
 }
 

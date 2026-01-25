@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formIncoives</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/examRegister.css">
+    <script src="../js/examRegister.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+ </head>
+ <body>
+  
+    <div class="container">
+          
+      
+     <div class="exam">
+      <h1 class="exams">Exam Register</h1>
+      
+      <form id="examForm"> 
+     
+         <div class="two">
+            
+           <div class="one">
+              <h1 class="student">Student Name</h1>
+              <input id="studentName" class="small" type="text" placeholder="Student Name">
+           </div>
+
+           <div class="one">
+              <h1 class="student">Math</h1>
+              <input id="math" class="small" type="number" placeholder="Math">
+           </div>
+
+        
+
+           <div class="one">
+              <h1 class="student">Arabic</h1>
+              <input id="arabic" class="small" type="number" placeholder="Arabic">
+           </div>
+         </div>
+         
+         <div class="two stud imag">  
+           <div class="one">
+              <h1 class="student">Image</h1>
+              <input id="image" class="small" type="text" placeholder="Image">
+           </div> </div>
+
+         <div class="two">
+            
+           <div class="one">
+              <h1 class="student">Chemistry</h1>
+              <input id="chemistry" class="small" type="number" placeholder="Chemistry">
+           </div>
+
+           <div class="one">
+              <h1 class="student">History</h1>
+              <input id="history" class="small" type="number" placeholder="History">
+           </div>
+
+           <div class="one">
+              <h1 class="student">Biology</h1>
+              <input id="biology" class="small" type="number" placeholder="Biology">
+           </div>
+         </div>
+         <div class="two">
+            
+           <div class="one">
+              <h1 class="student">Physcis</h1>
+              <input id="physcis" class="small" type="number" placeholder="Physcis">
+           </div>
+
+           <div class="one">
+              <h1 class="student">Af Somalia</h1>
+              <input id="somalia" class="small" type="number" placeholder="History">
+           </div>
+
+           <div class="one">
+              <h1 class="student">Geography</h1>
+              <input id="geography" class="small" type="number" placeholder="Geography">
+           </div>
+         </div>
+
+         <div class="two stud">
+            
+           <div class="one">
+              <h1 class="student">Islamic Studies</h1>
+              <input id="islamicStudies" class="small" type="number" placeholder="Islamic Studies">
+           </div>
+           <div class="one">
+              <h1 class="student">ICT/Computer</h1>
+              <input id="ictComputer" class="small" type="number" placeholder="ICT Computer">
+           </div>
+         </div>
+
+         <button type="submit" id="btn" class="btn">Save</button>
+      </form>
+    </div>
+    <div class="examContainer">
+      <div id="logout">
+         <span id="user"></span>
+         <h1> Logout</h1>
+      </div>
+      <div class="cardBox">
+         <div class="primary">
+             <h1>Somalia Primary School</h1>
+             <h1>Exam Register</h1>
+             <h2>Class Name: <span>Form 4</span></h2>
+             <h2>Date: <span>2026/1/18</span></h2>
+         </div>
+         <div class="tableDiv">
+         <table id="table">
+            <thead id="thead"> 
+            <tr>
+               <th>ID</th>
+               <th>StudentName</th>
+               <th>Image</th>
+               <th>Math</th>
+               <th>Arabic</th>
+               <th>Chemistry</th>
+               <th>History</th>
+               <th>Biology</th>
+               <th>Physcis</th>
+               <th>Somalia</th>
+               <th>Geography</th>
+               <th>IslamicStudies</th>
+               <th>Ict/Computer</th>
+               <th class="grede">Total</th>
+               <th class="grede">Min</th>
+               <th class="grede">Max</th>
+               <th class="grede">Average</th>
+               <th class="grede">Grade</th>
+               <th class="grede">Action</th>
+            </tr>
+          </thead>
+          <tbody id="trRead">
+           <!-- <tr>
+               <td>55</td>
+               <td>100</td>
+               <td>65</td>
+               <td>77</td>
+               <td>88</td>
+               <td>40</td>
+               <td>99</td>
+               <td>68</td>
+               <td>71</td>
+               <td>59</td>
+               <td class="grede">663</td>
+               <td class="grede">40</td>
+               <td class="grede">100</td>
+               <td class="grede">75%</td>
+               <td class="grede">A</td>
+              <td><button class="editBtn but">Edit</button>
+              <button class="but deleteBtn">Delete</button>
+            </tr>  -->
+         </tbody>
+         
+     </div>
+          
+         </table>
+      </div>
+      
+      </div>
+     
+    </div>
+  </div>
+
+ </body>
+ </html>

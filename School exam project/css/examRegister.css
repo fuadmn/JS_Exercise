@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    
+    background-color: rgb(238, 238, 243);
+    display: flex;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    
+}
+
+.exams{
+    text-align: center;
+    
+}
+
+.exam{
+    background-color: rgb(255, 255, 255);
+    height:43rem;
+    width: 30rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.student{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.small{
+    height: 2rem;
+    width: 100%;
+    border-radius: 0.6rem;
+    border: 1px solid rgb(218, 212, 212);
+}
+
+.one, ::placeholder{
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+}
+
+.dent{
+ width: 15%;
+}
+
+.two{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.2rem;
+    margin: 1.5rem 0;
+}
+
+.stud{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.btn{
+    background-color: blue;
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.btn:hover{
+    background-color: rgb(131, 16, 238);
+}
+
+.cardBox{
+    background-color: rgb(218, 255, 194);
+
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0,0.3);
+    padding: 1rem;
+}
+
+.primary{
+    border-bottom: 1px solid rgb(190, 168, 168);
+    height: 15rem;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardBox h1{
+    font-size: 2rem;
+}
+
+.primary span{
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid blueviolet;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th{
+    background-color: rgb(68, 68, 255);
+    color: white;
+    
+}
+tr:nth-child(even){
+    background-color: rgb(220, 245, 230);
+}
+
+.but{
+    height: 2rem;
+    width: 5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.editBtn{
+     background-color: blue;
+     margin-right: 0.5rem;
+}
+
+.editBtn:hover{
+    background-color: rgb(137, 21, 246);
+}
+
+.deleteBtn{
+    background-color: red;
+}
+
+.deleteBtn:hover{
+    background-color: rgb(231, 27, 27);
+}
+
+.grede{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.total{
+    font-weight: 900;
+}
+
+.image{
+    width:  5rem;
+    height:  2rem;
+}
+
+.imag{
+    width: 56rem;
+}
+
+#logout{
+    /* background-color: white; */
+    height: 3rem;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 1rem;
+    align-items: center;
+} 
+
+#logout h1{
+    text-align: end;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: rgb(95, 109, 109);
+    height: 100%; 
+    border-radius: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: 900;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+#logout h1:hover{
+   background-color: rgb(104, 133, 133);
+}
+
+#user{
+    font-weight: 900;
+    font-size: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
